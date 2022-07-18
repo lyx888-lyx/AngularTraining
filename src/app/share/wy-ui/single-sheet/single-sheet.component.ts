@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {SongSheet} from "../../../service/data-types/common.types";
 
 @Component({
@@ -9,9 +9,14 @@ import {SongSheet} from "../../../service/data-types/common.types";
 })
 export class SingleSheetComponent implements OnInit {
   @Input() sheets: SongSheet;
+  @Output() onPlay = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  playSheet(id: number) {
+    this.onPlay.emit(id);
+  }
 }

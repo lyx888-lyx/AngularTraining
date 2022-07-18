@@ -9,10 +9,10 @@ import {WyPlayerModule} from "./wy-player/wy-player.module";
   imports: [
     WyPlayerModule
   ],
-  exports: [
-    SingleSheetComponent,
-    PlayCountPipe,
-    WyPlayerModule
-  ]
+    exports: [
+        SingleSheetComponent,
+        PlayCountPipe,
+        WyPlayerModule
+    ]
 })
 export class WyUiModule { }
